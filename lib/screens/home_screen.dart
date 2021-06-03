@@ -10,7 +10,10 @@ class _HomeScreenState extends State<HomeScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       body: SafeArea(
-        child: Container(),
+        child: Container(
+          child:
+              ListView(physics: BouncingScrollPhysics(), children: <Widget>[]),
+        ),
       ),
     );
   }
