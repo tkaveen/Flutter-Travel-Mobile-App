@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_svg/flutter_svg.dart';
+// import 'package:flutter_svg/flutter_svg.dart';
 
 class HomeScreen extends StatefulWidget {
   @override
@@ -26,7 +26,7 @@ class _HomeScreenState extends State<HomeScreen> {
                       borderRadius: BorderRadius.circular(9.6),
                       color: Color(0x080a0928),
                     ),
-                    child: SvgPicture.asset('assets/svg/icon_drawer.svg '),
+                    // child: SvgPicture.asset('assets/svg/icon_drawer.svg '),
                   ),
                   Container(
                     height: 57.6,
@@ -36,7 +36,7 @@ class _HomeScreenState extends State<HomeScreen> {
                       borderRadius: BorderRadius.circular(9.6),
                       color: Color(0x080a0928),
                     ),
-                    child: SvgPicture.asset('assets/svg/icon_search.svg '),
+                    // child: SvgPicture.asset('assets/svg/icon_search.svg '),
                   ),
                 ],
               ),
