@@ -3,7 +3,7 @@ description: A new Flutter project.
 
 # The following line prevents the package from being accidentally published to
 # pub.dev using `pub publish`. This is preferred for private packages.
-publish_to: 'none' # Remove this line if you wish to publish to pub.dev
+publish_to: "none" # Remove this line if you wish to publish to pub.dev
 
 # The following defines the version and build number for your application.
 # A version number is three numbers separated by dots, like 1.2.43
@@ -23,14 +23,17 @@ environment:
 dependencies:
   flutter:
     sdk: flutter
-  flutter_svg: ^0.17.4
+  smooth_page_indicator: ^0.2.3
+  tab_indicator_styler: ^1.0.0
+    
+  # flutter_svg: ^0.17.4
   # google_fonts: ^1.1.0
-  # smooth_page_indicator: ^0.1.5
-
+  
 
   # The following adds the Cupertino Icons font to your application.
   # Use with the CupertinoIcons class for iOS style icons.
   cupertino_icons: ^1.0.1
+
 
 dev_dependencies:
   flutter_test:
@@ -41,7 +44,6 @@ dev_dependencies:
 
 # The following section is specific to Flutter.
 flutter:
-
   # The following line ensures that the Material Icons font is
   # included with your application, so that you can use the icons in
   # the material Icons class.
@@ -49,9 +51,8 @@ flutter:
 
   # To add assets to your application, add an assets section, like this:
   assets:
-  - assets/images/ 
-  - assets/svg/
-
+    - assets/images/
+    - assets/svg/
 
   #   - images/a_dot_burr.jpeg
   #   - images/a_dot_ham.jpeg
@@ -68,11 +69,18 @@ flutter:
   # list giving the asset and other descriptors for the font. For
   # example:
   fonts:
-  - family: Jost
-    fonts:
-       - asset: assets/fonts/Jost-ExtraBold.ttf
-       - asset: assets/fonts/Jost-SemiBold.ttf
-       - asset: assets/fonts/Jost-ExtraLight.ttf
+    - family: Jost, Apercu Pro
+      fonts:
+        - asset: assets/fonts/Jost-ExtraBold.ttf
+        - asset: assets/fonts/Jost-SemiBold.ttf
+        - asset: assets/fonts/Jost-ExtraLight.ttf
+        - asset: assets/fonts/Apercu Pro.ttf
+        - asset: assets/fonts/Apercu Pro Bold.ttf
+        # - asset: assets/fonts/Apercu Pro.ttf
+        # - asset: assets/fonts/Apercu Pro Bold.ttf
+    # - family: Apercu Pro
+    #     - asset: assets/fonts/Apercu Pro.ttf
+    #     - asset: assets/fonts/Apercu Pro Bold.ttf
 
   #   - family: Trajan Pro
   #     fonts:
