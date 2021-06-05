@@ -17,6 +17,7 @@ class _HomeScreenState extends State<HomeScreen> {
               height: 57.6,
               margin: EdgeInsets.only(top: 28, left: 28.8, right: 28.8),
               child: Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: <Widget>[
                   Container(
                     height: 57.6,
