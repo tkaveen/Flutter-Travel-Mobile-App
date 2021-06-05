@@ -1,3 +1,6 @@
+// import 'dart:html';
+import 'dart:ui';
+
 import 'package:flutter/material.dart';
 // import 'package:flutter_svg/flutter_svg.dart';
 
@@ -48,6 +51,16 @@ class _HomeScreenState extends State<HomeScreen> {
                     // child: SvgPicture.asset('assets/svg/icon_search.svg '),
                   ),
                 ],
+              ),
+            ),
+            Padding(
+              padding: EdgeInsets.only(top: 48, left: 28.8),
+              child: Text(
+                'Explore\nthe Nature',
+                style: TextStyle(
+                    fontFamily: 'Jost',
+                    fontSize: 50,
+                    fontWeight: FontWeight.w700),
               ),
             )
           ]),
