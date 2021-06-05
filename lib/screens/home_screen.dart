@@ -26,6 +26,10 @@ class _HomeScreenState extends State<HomeScreen> {
                       borderRadius: BorderRadius.circular(9.6),
                       color: Color(0x080a0928),
                     ),
+                    child: Icon(
+                      Icons.menu,
+                      color: Color(0xFF676E79),
+                    ),
                     // child: SvgPicture.asset('assets/svg/icon_drawer.svg '),
                   ),
                   Container(
@@ -35,6 +39,10 @@ class _HomeScreenState extends State<HomeScreen> {
                     decoration: BoxDecoration(
                       borderRadius: BorderRadius.circular(9.6),
                       color: Color(0x080a0928),
+                    ),
+                    child: Icon(
+                      Icons.search,
+                      color: Color(0xFF676E79),
                     ),
                     // child: SvgPicture.asset('assets/svg/icon_search.svg '),
                   ),
