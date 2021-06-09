@@ -5,7 +5,7 @@ import 'dart:ui';
 import 'package:flutter/material.dart';
 // import 'package:flutter_svg/flutter_svg.dart';
 import 'package:smooth_page_indicator/smooth_page_indicator.dart';
-// import 'package:tab_indicator_styler/tab_indicator_styler.dart';
+import 'package:travel_app/models/recommended_modal.dart';
 import 'package:travel_app/widgets/custom_tab_indicator.dart';
 
 class HomeScreen extends StatefulWidget {
@@ -14,6 +14,7 @@ class HomeScreen extends StatefulWidget {
 }
 
 class _HomeScreenState extends State<HomeScreen> {
+  final _pageController = PageController(viewportFraction: 0.877)
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -88,7 +89,6 @@ class _HomeScreenState extends State<HomeScreen> {
                       fontWeight: FontWeight.w700),
                   indicator: RoundedRectangleTabIndicator(
                       color: Color(0xFF000000), weight: 2.4, width: 14.4),
-                  // indicator: MaterialIndicator(color:Color(0xFF000000) ,  : 2.4 , width: 14.4 ),
                   tabs: [
                     Tab(
                       child: Container(
@@ -113,7 +113,17 @@ class _HomeScreenState extends State<HomeScreen> {
                   ],
                 ),
               ),
-            )
+            ),
+             Container(
+               height: 218.4,
+               margin: EdgeInsets.only(top: 16),
+               child: PageView(
+                 physics: BouncingScrollPhysics(),
+                 controller: _pageController,
+                 scrollDirection: Axis.horizontal,
+                 children: List.generate(recommendations.length  , (index) => null),
+               ),
+             )
           ]),
         ),
       ),
