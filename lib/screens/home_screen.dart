@@ -4,7 +4,7 @@ import 'dart:ui';
 
 import 'package:flutter/material.dart';
 // import 'package:flutter_svg/flutter_svg.dart';
-import 'package:smooth_page_indicator/smooth_page_indicator.dart';
+// import 'package:smooth_page_indicator/smooth_page_indicator.dart';
 import 'package:travel_app/models/recommended_modal.dart';
 import 'package:travel_app/widgets/custom_tab_indicator.dart';
 
@@ -14,7 +14,7 @@ class HomeScreen extends StatefulWidget {
 }
 
 class _HomeScreenState extends State<HomeScreen> {
-  final _pageController = PageController(viewportFraction: 0.877)
+  final _pageController = PageController(viewportFraction: 0.877);
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -114,16 +114,68 @@ class _HomeScreenState extends State<HomeScreen> {
                 ),
               ),
             ),
-             Container(
-               height: 218.4,
-               margin: EdgeInsets.only(top: 16),
-               child: PageView(
-                 physics: BouncingScrollPhysics(),
-                 controller: _pageController,
-                 scrollDirection: Axis.horizontal,
-                 children: List.generate(recommendations.length  , (index) => null),
-               ),
-             )
+            Container(
+              height: 218.4,
+              margin: EdgeInsets.only(top: 16),
+              child: PageView(
+                physics: BouncingScrollPhysics(),
+                controller: _pageController,
+                scrollDirection: Axis.horizontal,
+                children: List.generate(
+                    recommendations.length,
+                    (int index) => Container(
+                          margin: EdgeInsets.only(right: 28.8),
+                          width: 333.6,
+                          height: 218.4,
+                          decoration: BoxDecoration(
+                              borderRadius: BorderRadius.circular(9.6),
+                              image: DecorationImage(
+                                  fit: BoxFit.cover,
+                                  image: NetworkImage(
+                                      recommendations[index].image))),
+                          child: Stack(
+                            children: <Widget>[
+                              Positioned(
+                                bottom: 19.2,
+                                left: 19.2,
+                                child: ClipRRect(
+                                  borderRadius: BorderRadius.circular(4.8),
+                                  child: BackdropFilter(
+                                    filter: ImageFilter.blur(
+                                        sigmaY: 19.2, sigmaX: 19.2),
+                                    child: Container(
+                                      height: 36,
+                                      padding: EdgeInsets.only(
+                                          left: 16.72, right: 14.4),
+                                      alignment: Alignment.centerLeft,
+                                      child: Row(
+                                        children: <Widget>[
+                                          Icon(
+                                            Icons.location_on,
+                                            color: Color(0xFF676E79),
+                                          ),
+                                          SizedBox(
+                                            width: 9.52,
+                                          ),
+                                          Text(
+                                            recommendations[index].name,
+                                            style: TextStyle(
+                                                fontFamily: 'Apercu Pro',
+                                                color: Colors.white,
+                                                fontSize: 16.8,
+                                                fontWeight: FontWeight.w700),
+                                          )
+                                        ],
+                                      ),
+                                    ),
+                                  ),
+                                ),
+                              )
+                            ],
+                          ),
+                        )),
+              ),
+            )
           ]),
         ),
       ),
