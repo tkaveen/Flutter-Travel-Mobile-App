@@ -3,6 +3,7 @@
 import 'dart:ui';
 
 import 'package:flutter/material.dart';
+import 'package:smooth_page_indicator/smooth_page_indicator.dart';
 // import 'package:flutter_svg/flutter_svg.dart';
 // import 'package:smooth_page_indicator/smooth_page_indicator.dart';
 import 'package:travel_app/models/recommended_modal.dart';
@@ -174,6 +175,19 @@ class _HomeScreenState extends State<HomeScreen> {
                             ],
                           ),
                         )),
+              ),
+            ),
+            Padding(
+              padding: EdgeInsets.only(left: 28.8, top: 28.8),
+              child: SmoothPageIndicator(
+                controller: _pageController,
+                count: recommendations.length,
+                effect: ExpandingDotsEffect(
+                    activeDotColor: Color(0xFF8a8a8a),
+                    dotColor: Color(0xFFababab),
+                    dotHeight: 4.8,
+                    dotWidth: 6,
+                    spacing: 4.8),
               ),
             )
           ]),
