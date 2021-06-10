@@ -153,10 +153,8 @@ class _HomeScreenState extends State<HomeScreen> {
                                           alignment: Alignment.centerLeft,
                                           child: Row(
                                             children: <Widget>[
-                                              Icon(
-                                                Icons.location_on,
-                                                color: Color(0xFF676E79),
-                                              ),
+                                              Icon(Icons.location_on,
+                                                  color: Colors.white),
                                               SizedBox(
                                                 width: 9.52,
                                               ),
@@ -200,7 +198,7 @@ class _HomeScreenState extends State<HomeScreen> {
                     crossAxisAlignment: CrossAxisAlignment.center,
                     children: <Widget>[
                       Text(
-                        'PoPular Categories',
+                        'Popular Categories',
                         style: TextStyle(
                             fontFamily: 'Jost',
                             fontSize: 28,
@@ -208,7 +206,7 @@ class _HomeScreenState extends State<HomeScreen> {
                             fontWeight: FontWeight.w700),
                       ),
                       Text(
-                        'PoPular Categories',
+                        'Popular Categories',
                         style: TextStyle(
                             fontFamily: 'Jost',
                             fontSize: 16.8,
