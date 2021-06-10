@@ -1,7 +1,4 @@
-// import 'dart:html';
-
 import 'dart:ui';
-
 import 'package:flutter/material.dart';
 import 'package:smooth_page_indicator/smooth_page_indicator.dart';
 // import 'package:flutter_svg/flutter_svg.dart';
@@ -188,6 +185,31 @@ class _HomeScreenState extends State<HomeScreen> {
                     dotHeight: 4.8,
                     dotWidth: 6,
                     spacing: 4.8),
+              ),
+            ),
+            Padding(
+              padding: EdgeInsets.only(top: 48, left: 28.8, right: 28.8),
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                crossAxisAlignment: CrossAxisAlignment.center,
+                children: <Widget>[
+                  Text(
+                    'PoPular Categories',
+                    style: TextStyle(
+                        fontFamily: 'Jost',
+                        fontSize: 28,
+                        color: Color(0xFF000000),
+                        fontWeight: FontWeight.w700),
+                  ),
+                  Text(
+                    'PoPular Categories',
+                    style: TextStyle(
+                        fontFamily: 'Jost',
+                        fontSize: 16.8,
+                        color: Color(0xFF8a8a8a),
+                        fontWeight: FontWeight.w500),
+                  ),
+                ],
               ),
             )
           ]),
