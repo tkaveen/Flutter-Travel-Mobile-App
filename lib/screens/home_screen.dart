@@ -1,6 +1,8 @@
 import 'dart:ui';
 import 'package:flutter/material.dart';
 import 'package:smooth_page_indicator/smooth_page_indicator.dart';
+import 'package:travel_app/models/beach_model.dart';
+import 'package:travel_app/models/popular_model.dart';
 // import 'package:flutter_svg/flutter_svg.dart';
 // import 'package:smooth_page_indicator/smooth_page_indicator.dart';
 import 'package:travel_app/models/recommended_modal.dart';
@@ -16,9 +18,11 @@ class _HomeScreenState extends State<HomeScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: SafeArea(
-        child: Container(
-          child: ListView(physics: BouncingScrollPhysics(), children: <Widget>[
+        body: SafeArea(
+      child: Container(
+        child: ListView(
+          physics: BouncingScrollPhysics(),
+          children: <Widget>[
             Container(
               height: 57.6,
               margin: EdgeInsets.only(top: 28, left: 28.8, right: 28.8),
@@ -211,10 +215,66 @@ class _HomeScreenState extends State<HomeScreen> {
                   ),
                 ],
               ),
+            ),
+            Container(
+              margin: EdgeInsets.only(
+                top: 33.6,
+              ),
+              height: 45.6,
+              child: ListView.builder(
+                itemCount: populars.length,
+                scrollDirection: Axis.horizontal,
+                physics: BouncingScrollPhysics(),
+                padding: EdgeInsets.only(left: 28.8, right: 9.6),
+                itemBuilder: (context, index) {
+                  return Container(
+                    margin: EdgeInsets.only(right: 19.2),
+                    height: 45.6,
+                    decoration: BoxDecoration(
+                      borderRadius: BorderRadius.circular(9.6),
+                      color: Color(populars[index].color),
+                    ),
+                    child: Row(
+                      children: [
+                        SizedBox(
+                          width: 19.2,
+                        ),
+                        Image.asset(populars[index].image, height: 16.8),
+                        SizedBox(
+                          width: 19.2,
+                        )
+                      ],
+                    ),
+                  );
+                },
+              ),
+            ),
+            Container(
+              margin: EdgeInsets.only(top: 28.8, bottom: 16.8),
+              height: 124.8,
+              child: ListView.builder(
+                itemCount: beaches.length,
+                padding: EdgeInsets.only(left: 28.8, right: 12),
+                scrollDirection: Axis.horizontal,
+                physics: BouncingScrollPhysics(),
+                itemBuilder: (context, index) {
+                  return Container(
+                    height: 124.8,
+                    width: 188.4,
+                    margin: EdgeInsets.only(right: 16.8),
+                    decoration: BoxDecoration(
+                        borderRadius: BorderRadius.circular(9.6),
+                        image: DecorationImage(
+                          fit: BoxFit.cover,
+                          image: NetworkImage(beaches[index].image),
+                        )),
+                  );
+                },
+              ),
             )
-          ]),
+          ],
         ),
       ),
-    );
+    ));
   }
 }
