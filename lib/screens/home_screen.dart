@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:smooth_page_indicator/smooth_page_indicator.dart';
 import 'package:travel_app/models/beach_model.dart';
 import 'package:travel_app/models/popular_model.dart';
-import 'package:travel_app/models/recommended_modal.dart';
+import 'package:travel_app/models/recommended_model.dart';
 import 'package:travel_app/widgets/bottom_navigation_bar.dart';
 import 'package:travel_app/widgets/custom_tab_indicator.dart';
 
