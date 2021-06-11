@@ -1,4 +1,5 @@
 import 'dart:ui';
+import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
 import 'package:smooth_page_indicator/smooth_page_indicator.dart';
 import 'package:travel_app/models/beach_model.dart';
@@ -142,7 +143,7 @@ class _HomeScreenState extends State<HomeScreen> {
                                   borderRadius: BorderRadius.circular(9.6),
                                   image: DecorationImage(
                                       fit: BoxFit.cover,
-                                      image: NetworkImage(
+                                      image: CachedNetworkImageProvider(
                                           recommendations[index].image))),
                               child: Stack(
                                 children: <Widget>[
@@ -274,7 +275,8 @@ class _HomeScreenState extends State<HomeScreen> {
                             borderRadius: BorderRadius.circular(9.6),
                             image: DecorationImage(
                               fit: BoxFit.cover,
-                              image: NetworkImage(beaches[index].image),
+                              image: CachedNetworkImageProvider(
+                                  beaches[index].image),
                             )),
                       );
                     },
