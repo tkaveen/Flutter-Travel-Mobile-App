@@ -16,66 +16,66 @@ class SelectedScreen extends StatelessWidget {
         child: Stack(
           children: [
             PageView(
-              physics: BouncingScrollPhysics(),
               controller: _pageController,
               scrollDirection: Axis.horizontal,
               children: List.generate(
                   recommendedModel.images.length,
                   (int index) => Container(
-                        margin: EdgeInsets.only(right: 28.8),
-                        width: 333.6,
-                        height: 218.4,
                         decoration: BoxDecoration(
-                            borderRadius: BorderRadius.circular(9.6),
                             image: DecorationImage(
                                 fit: BoxFit.cover,
                                 image: CachedNetworkImageProvider(
                                     recommendedModel.images[index]))),
                       )),
             ),
-            Container(
-              height: 57.6,
-              margin: EdgeInsets.only(top: 28, left: 28.8, right: 28.8),
-              child: Row(
-                mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                children: <Widget>[
-                  Container(
-                    height: 57.6,
-                    width: 57.6,
-                    padding: EdgeInsets.all(18),
-                    decoration: BoxDecoration(
-                      borderRadius: BorderRadius.circular(9.6),
-                      color: Color(0x080a0928),
+            SafeArea(
+              child: Container(
+                height: 57.6,
+                margin: EdgeInsets.only(top: 28, left: 28.8, right: 28.8),
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: <Widget>[
+                    GestureDetector(
+                      onTap: () {
+                        Navigator.of(context).pop();
+                      },
+                      child: Container(
+                        height: 57.6,
+                        width: 57.6,
+                        padding: EdgeInsets.all(18),
+                        decoration: BoxDecoration(
+                          borderRadius: BorderRadius.circular(9.6),
+                          color: Color(0x080a0928),
+                        ),
+                        child: Icon(Icons.chevron_left, color: Colors.white),
+                        // child: SvgPicture.asset('assets/svg/icon_drawer.svg '),
+                      ),
                     ),
-                    child: Icon(
-                      Icons.menu,
-                      color: Color(0xFF676E79),
+                    Container(
+                      height: 57.6,
+                      width: 57.6,
+                      padding: EdgeInsets.all(18),
+                      decoration: BoxDecoration(
+                        borderRadius: BorderRadius.circular(9.6),
+                        color: Color(0x080a0928),
+                      ),
+                      child: Icon(
+                        Icons.favorite,
+                        color: Colors.white,
+                      ),
+                      // child: SvgPicture.asset('assets/svg/icon_search.svg '),
                     ),
-                    // child: SvgPicture.asset('assets/svg/icon_drawer.svg '),
-                  ),
-                  Container(
-                    height: 57.6,
-                    width: 57.6,
-                    padding: EdgeInsets.all(18),
-                    decoration: BoxDecoration(
-                      borderRadius: BorderRadius.circular(9.6),
-                      color: Color(0x080a0928),
-                    ),
-                    child: Icon(
-                      Icons.search,
-                      color: Color(0xFF676E79),
-                    ),
-                    // child: SvgPicture.asset('assets/svg/icon_search.svg '),
-                  ),
-                ],
+                  ],
+                ),
               ),
             ),
             Align(
-              alignment: Alignment.centerLeft,
+              alignment: Alignment.bottomLeft,
               child: Container(
                 height: 346.8,
                 margin: EdgeInsets.only(left: 28.8, bottom: 48, right: 28.8),
                 child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
                     SmoothPageIndicator(
                       controller: _pageController,
@@ -95,6 +95,7 @@ class SelectedScreen extends StatelessWidget {
                         style: TextStyle(
                             fontFamily: 'Apercu Pro',
                             fontSize: 42.6,
+                            color: Colors.white,
                             fontWeight: FontWeight.w700),
                       ),
                     ),
@@ -114,8 +115,11 @@ class SelectedScreen extends StatelessWidget {
                       height: 48,
                     ),
                     Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: [
                         Column(
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          mainAxisAlignment: MainAxisAlignment.center,
                           children: [
                             Text(
                               'Start from',
