@@ -4,6 +4,7 @@ import 'package:smooth_page_indicator/smooth_page_indicator.dart';
 import 'package:travel_app/models/beach_model.dart';
 import 'package:travel_app/models/popular_model.dart';
 import 'package:travel_app/models/recommended_model.dart';
+import 'package:travel_app/screens/selected_screen.dart';
 import 'package:travel_app/widgets/bottom_navigation_bar.dart';
 import 'package:travel_app/widgets/custom_tab_indicator.dart';
 
@@ -126,7 +127,14 @@ class _HomeScreenState extends State<HomeScreen> {
                     scrollDirection: Axis.horizontal,
                     children: List.generate(
                         recommendations.length,
-                        (int index) => Container(
+                        (int index) => GestureDetector(
+                            onTap: () {
+                              Navigator.of(context).push(MaterialPageRoute(
+                                  builder: (context) => SelectedScreen(
+                                      recommendedModel:
+                                          recommendations[index])));
+                            },
+                            child: Container(
                               margin: EdgeInsets.only(right: 28.8),
                               width: 333.6,
                               height: 218.4,
@@ -175,7 +183,7 @@ class _HomeScreenState extends State<HomeScreen> {
                                   )
                                 ],
                               ),
-                            )),
+                            ))),
                   ),
                 ),
                 Padding(
