@@ -1,5 +1,6 @@
 import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
+import 'package:smooth_page_indicator/smooth_page_indicator.dart';
 import 'package:travel_app/models/recommended_model.dart';
 
 class SelectedScreen extends StatelessWidget {
@@ -31,6 +32,64 @@ class SelectedScreen extends StatelessWidget {
                                     recommendedModel.images[index]))),
                       )),
             ),
+            Container(
+              height: 57.6,
+              margin: EdgeInsets.only(top: 28, left: 28.8, right: 28.8),
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                children: <Widget>[
+                  Container(
+                    height: 57.6,
+                    width: 57.6,
+                    padding: EdgeInsets.all(18),
+                    decoration: BoxDecoration(
+                      borderRadius: BorderRadius.circular(9.6),
+                      color: Color(0x080a0928),
+                    ),
+                    child: Icon(
+                      Icons.menu,
+                      color: Color(0xFF676E79),
+                    ),
+                    // child: SvgPicture.asset('assets/svg/icon_drawer.svg '),
+                  ),
+                  Container(
+                    height: 57.6,
+                    width: 57.6,
+                    padding: EdgeInsets.all(18),
+                    decoration: BoxDecoration(
+                      borderRadius: BorderRadius.circular(9.6),
+                      color: Color(0x080a0928),
+                    ),
+                    child: Icon(
+                      Icons.search,
+                      color: Color(0xFF676E79),
+                    ),
+                    // child: SvgPicture.asset('assets/svg/icon_search.svg '),
+                  ),
+                ],
+              ),
+            ),
+            Align(
+              alignment: Alignment.centerLeft,
+              child: Container(
+                height: 346.8,
+                margin: EdgeInsets.only(left: 28.8, bottom: 48, right: 28.8),
+                child: Column(
+                  children: [
+                    SmoothPageIndicator(
+                      controller: _pageController,
+                      count: recommendations.length,
+                      effect: ExpandingDotsEffect(
+                          activeDotColor: Color(0xFF8a8a8a),
+                          dotColor: Color(0xFFababab),
+                          dotHeight: 4.8,
+                          dotWidth: 6,
+                          spacing: 4.8),
+                    ),
+                  ],
+                ),
+              ),
+            )
           ],
         ),
       ),
