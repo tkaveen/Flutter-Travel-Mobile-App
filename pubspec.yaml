@@ -69,11 +69,11 @@ flutter:
   # list giving the asset and other descriptors for the font. For
   # example:
   fonts:
-    - family: Jost, Apercu Pro
+    - family:  Apercu Pro
       fonts:
-        - asset: assets/fonts/Jost-ExtraBold.ttf
-        - asset: assets/fonts/Jost-SemiBold.ttf
-        - asset: assets/fonts/Jost-ExtraLight.ttf
+        # - asset: assets/fonts/Jost-ExtraBold.ttf
+        # - asset: assets/fonts/Jost-SemiBold.ttf
+        # - asset: assets/fonts/Jost-ExtraLight.ttf
         - asset: assets/fonts/Apercu Pro.ttf
         - asset: assets/fonts/Apercu Pro Bold.ttf
         # - asset: assets/fonts/Apercu Pro.ttf
