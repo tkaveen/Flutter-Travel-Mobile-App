@@ -1,3 +1,5 @@
+import 'dart:ui';
+
 import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
@@ -87,30 +89,82 @@ class SelectedScreen extends StatelessWidget {
                           dotWidth: 6,
                           spacing: 4.8),
                     ),
-                    Padding(
-                      padding: EdgeInsets.only(top: 19.2),
-                      child: Text(
-                        recommendedModel.tagLine,
-                        maxLines: 2,
-                        style: TextStyle(
-                            fontFamily: 'Apercu Pro',
-                            fontSize: 42.6,
-                            color: Colors.white,
-                            fontWeight: FontWeight.w700),
+                    // Container(
+                    //   child:
+                    //   ClipRRect(child: BackdropFilter(filter: ImageFilter.blur(sigmaX: 10, sigmaY: 10),),),
+
+                    // ),
+                    Container(
+                      padding: EdgeInsets.only(top: 20),
+                      child: Stack(
+                        children: <Widget>[
+                          Positioned(
+                            child: ClipRRect(
+                              borderRadius: BorderRadius.circular(10),
+                              child: BackdropFilter(
+                                filter: ImageFilter.blur(
+                                    sigmaY: 19.2, sigmaX: 19.2),
+                                child: Container(
+                                  child: Padding(
+                                    padding: EdgeInsets.only(
+                                        top: 10, left: 10, bottom: 15),
+                                    child: Column(
+                                      children: [
+                                        Text(
+                                          recommendedModel.tagLine,
+                                          maxLines: 2,
+                                          style: TextStyle(
+                                              fontFamily: 'Apercu Pro',
+                                              fontSize: 42.6,
+                                              color: Colors.white,
+                                              fontWeight: FontWeight.w700),
+                                        ),
+                                        SizedBox(
+                                          height: 5,
+                                        ),
+                                        Text(
+                                          recommendedModel.description,
+                                          maxLines: 3,
+                                          style: TextStyle(
+                                              fontFamily: 'Apercu Pro',
+                                              fontSize: 19.2,
+                                              fontWeight: FontWeight.w500,
+                                              color: Colors.white),
+                                        ),
+                                      ],
+                                    ),
+                                  ),
+                                ),
+                              ),
+                            ),
+                          )
+                        ],
                       ),
                     ),
-                    Padding(
-                      padding: EdgeInsets.only(top: 19.2),
-                      child: Text(
-                        recommendedModel.description,
-                        maxLines: 3,
-                        style: TextStyle(
-                            fontFamily: 'Apercu Pro',
-                            fontSize: 19.2,
-                            fontWeight: FontWeight.w500,
-                            color: Colors.white),
-                      ),
-                    ),
+                    // Padding(
+                    //   padding: EdgeInsets.only(top: 19.2),
+                    //   child: Text(
+                    //     recommendedModel.tagLine,
+                    //     maxLines: 2,
+                    //     style: TextStyle(
+                    //         fontFamily: 'Apercu Pro',
+                    //         fontSize: 42.6,
+                    //         color: Colors.white,
+                    //         fontWeight: FontWeight.w700),
+                    //   ),
+                    // ),
+                    // Padding(
+                    //   padding: EdgeInsets.only(top: 19.2),
+                    //   child: Text(
+                    //     recommendedModel.description,
+                    //     maxLines: 3,
+                    //     style: TextStyle(
+                    //         fontFamily: 'Apercu Pro',
+                    //         fontSize: 19.2,
+                    //         fontWeight: FontWeight.w500,
+                    //         color: Colors.white),
+                    //   ),
+                    // ),
                     SizedBox(
                       height: 48,
                     ),
