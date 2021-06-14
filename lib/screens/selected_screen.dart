@@ -107,7 +107,10 @@ class SelectedScreen extends StatelessWidget {
                                 child: Container(
                                   child: Padding(
                                     padding: EdgeInsets.only(
-                                        top: 10, left: 10, bottom: 15),
+                                        top: 17,
+                                        left: 12,
+                                        bottom: 17,
+                                        right: 12),
                                     child: Column(
                                       children: [
                                         Text(
@@ -131,6 +134,62 @@ class SelectedScreen extends StatelessWidget {
                                               fontWeight: FontWeight.w500,
                                               color: Colors.white),
                                         ),
+                                        SizedBox(
+                                          height: 48,
+                                        ),
+                                        Row(
+                                          mainAxisAlignment:
+                                              MainAxisAlignment.spaceBetween,
+                                          children: [
+                                            Column(
+                                              crossAxisAlignment:
+                                                  CrossAxisAlignment.start,
+                                              mainAxisAlignment:
+                                                  MainAxisAlignment.center,
+                                              children: [
+                                                Text(
+                                                  'Start from',
+                                                  style: GoogleFonts.lato(
+                                                      fontSize: 16.8,
+                                                      fontWeight:
+                                                          FontWeight.w500,
+                                                      color: Colors.white),
+                                                ),
+                                                Text(
+                                                  '\$ ${recommendedModel.price.toString()}',
+                                                  style: GoogleFonts.lato(
+                                                      fontSize: 21.6,
+                                                      fontWeight:
+                                                          FontWeight.w700,
+                                                      color: Colors.white),
+                                                )
+                                              ],
+                                            ),
+                                            Container(
+                                              height: 62.4,
+                                              decoration: BoxDecoration(
+                                                  borderRadius:
+                                                      BorderRadius.circular(
+                                                          9.6),
+                                                  color: Colors.white),
+                                              child: Align(
+                                                alignment: Alignment.center,
+                                                child: Padding(
+                                                  padding: EdgeInsets.only(
+                                                      left: 28.8, right: 28.8),
+                                                  child: Text(
+                                                    'Explore Now >>',
+                                                    style: GoogleFonts.lato(
+                                                        fontSize: 19.2,
+                                                        fontWeight:
+                                                            FontWeight.w700,
+                                                        color: Colors.black),
+                                                  ),
+                                                ),
+                                              ),
+                                            )
+                                          ],
+                                        )
                                       ],
                                     ),
                                   ),
@@ -165,53 +224,6 @@ class SelectedScreen extends StatelessWidget {
                     //         color: Colors.white),
                     //   ),
                     // ),
-                    SizedBox(
-                      height: 48,
-                    ),
-                    Row(
-                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                      children: [
-                        Column(
-                          crossAxisAlignment: CrossAxisAlignment.start,
-                          mainAxisAlignment: MainAxisAlignment.center,
-                          children: [
-                            Text(
-                              'Start from',
-                              style: GoogleFonts.lato(
-                                  fontSize: 16.8,
-                                  fontWeight: FontWeight.w500,
-                                  color: Colors.white),
-                            ),
-                            Text(
-                              '\$ ${recommendedModel.price.toString()}',
-                              style: GoogleFonts.lato(
-                                  fontSize: 21.6,
-                                  fontWeight: FontWeight.w700,
-                                  color: Colors.white),
-                            )
-                          ],
-                        ),
-                        Container(
-                          height: 62.4,
-                          decoration: BoxDecoration(
-                              borderRadius: BorderRadius.circular(9.6),
-                              color: Colors.white),
-                          child: Align(
-                            alignment: Alignment.center,
-                            child: Padding(
-                              padding: EdgeInsets.only(left: 28.8, right: 28.8),
-                              child: Text(
-                                'Explore Now >>',
-                                style: GoogleFonts.lato(
-                                    fontSize: 19.2,
-                                    fontWeight: FontWeight.w700,
-                                    color: Colors.black),
-                              ),
-                            ),
-                          ),
-                        )
-                      ],
-                    )
                   ],
                 ),
               ),
