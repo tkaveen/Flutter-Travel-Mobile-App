@@ -65,7 +65,7 @@ class _HomeScreenState extends State<HomeScreen> {
                 Padding(
                   padding: EdgeInsets.only(top: 48, left: 28.8),
                   child: Text(
-                    'Explore\nthe Nature',
+                    'Explore\nSri Lanka',
                     style: TextStyle(
                         fontFamily: 'Jost',
                         fontSize: 50,

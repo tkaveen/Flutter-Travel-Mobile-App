@@ -33,6 +33,22 @@ var recommendationsData = [
     "price": 100
   },
   {
+    "name": "Mirissa, Sri Lanka",
+    "tagLine": "Mirissa The Heaven Beach",
+    "image":
+        "https://images.unsplash.com/photo-1522310193626-604c5ef8be43?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=700&q=80",
+    "images": [
+      "https://images.unsplash.com/photo-1525849306000-cc26ceb5c1d7?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=675&q=80",
+      "https://images.unsplash.com/photo-1531201890865-fb64780d16e9?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=675&q=80",
+      "https://images.unsplash.com/photo-1543043204-3f4e66dc5c2b?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=675&q=80",
+      "https://images.unsplash.com/photo-1554532336-24e48aa294c7?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=967&q=80",
+      "https://images.unsplash.com/photo-1517016006573-2eefaa2f5b63?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=634&q=80",
+    ],
+    "description":
+        "Mirissa is a small town on the south coast of Sri Lanka, located in the Matara District of the Southern Province.",
+    "price": 120
+  },
+  {
     "name": "Nine Arch, Sri Lanka",
     "tagLine": "Beautiful of Nine Arch",
     "image":
@@ -47,22 +63,6 @@ var recommendationsData = [
     "description":
         "The Nine Arch Bridge also called the Bridge in the Sky, is a viaduct bridge in Sri Lanka",
     "price": 130
-  },
-  {
-    "name": "Bali, Indonesia",
-    "tagLine": "Bali The Beautiful Heaven",
-    "image":
-        "https://images.unsplash.com/photo-1539367628448-4bc5c9d171c8?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=675&q=80",
-    "images": [
-      "https://images.unsplash.com/photo-1539367628448-4bc5c9d171c8?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=675&q=80",
-      "https://images.unsplash.com/photo-1542897644-e04428948020?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=564&q=80",
-      "https://images.unsplash.com/photo-1546845776-dcdf70fd09e3?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=634&q=80",
-      "https://images.unsplash.com/photo-1517480448885-d5c53555ba8c?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1034&q=80",
-      "https://images.unsplash.com/photo-1524675053444-52c3ca294ad2?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=634&q=80",
-    ],
-    "description":
-        "Bali, the famed Island of the Gods, with its varied landscape of hills and mountains, rugged coastlines and sandy beaches, lush rice terraces and barren volcanic hillsides all providing a picturesque backdrop to its colourful, deeply spiritual and unique culture, stakes a serious claim to be paradise on earth.",
-    "price": 120
   },
   {
     "name": "Yogyakarta, Indonesia",
